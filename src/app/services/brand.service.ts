@@ -16,4 +16,4 @@ export class BrandService {
     return this.httpClient.get<ListResponseModel<Brand>>(this.apiUrl);
   }
 
-}
+}     
