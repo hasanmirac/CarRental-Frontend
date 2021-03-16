@@ -1,9 +1,11 @@
-<h2 class="text-center text-white bg-secondary fw-bold fst-italic">Colors</h2>
-<ul *ngFor="let color of colors" class="list-group">
+<h2 class="text-center text-white bg-secondary fw-bold fst-italic">Renkler</h2>
+<ul class="list-group">
+    <li [class]="getAllColorClass()" routerLink="/cars">Tüm Renkler</li>
     <li  (click)="setCurrentColor(color)" 
-    routerLink="/cars/colors/cars/{{color.colorId}}" 
+    routerLink="/cars/color/{{color.colorId}}" 
     *ngFor="let color of colors"
-    [class]="getCurrentColorClass(color)">{{color.colorName}}</li>
+    [class]="getCurrentColorClass(color)">
+    {{color.colorName}}</li>
 </ul>
 
 <h5 *ngIf="currentColor">{{currentColor.colorName }} seçtiniz</h5>
